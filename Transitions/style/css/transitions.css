@@ -1,0 +1,23 @@
+/* * * * * *
+ *         *
+ *  TRAN1  *
+ *         *
+ * * * * * */
+#tran1
+{
+position:absolute;
+width:100px;
+height:100px;
+top:0px;
+left:0px;
+background:red;
+transition:left 2s, transform 2s;
+-webkit-transition:left 2s, -webkit-transform 2s; /* Safari */
+}
+
+#tran1:hover
+{
+left:200px;
+transform:rotate(90deg);
+-webkit-transform:rotate(90deg); /* Safari */
+}
