@@ -1,0 +1,96 @@
+/* * * * * * * * * * * * * * * 
+ * 
+ * Step 1, reset unordered list
+ *
+ * * * * * * * * * * * * * * */
+
+ul{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* * * * * * * * * * * * * * * 
+ * 
+ * Step 2, css for the list items
+ *
+ * * * * * * * * * * * * * * */
+
+#breadcrumbs{
+  background: white;
+  border-width: 1px;
+  border-style: solid;
+  border-color: white white white;
+  border-radius: 5px;
+  overflow: hidden;
+  width: 100%;
+}
+
+
+#breadcrumbs li{
+  float: left;
+}
+
+
+#breadcrumbs a{
+  padding: .7em 1em .7em 2em;
+  float: left;
+  text-decoration: none;
+  color: white;
+  position: relative;
+  text-shadow: 0 1px 0 rgba(255,255,255,.5);
+  background-color: green;
+  background-image: linear-gradient(to right, lightblue, green);  
+}
+
+
+#breadcrumbs li:first-child a{
+  padding-left: 1em;
+  border-radius: 5px 0 0 5px;
+}
+
+
+#breadcrumbs a:hover{
+  background: lightgreen;
+}
+
+
+#breadcrumbs a::after,
+#breadcrumbs a::before{
+  content: "";
+  position: absolute;
+  top: 50%;
+  margin-top: -1.5em;   
+  border-top: 1.5em solid transparent;
+  border-bottom: 1.5em solid transparent;
+  border-left: 1em solid;
+  right: -1em;
+}
+
+
+#breadcrumbs a::after{ 
+  z-index: 2;
+  border-left-color: green;  
+}
+
+#breadcrumbs a::before{ 
+  right: -1.1em;
+  z-index: 1; 
+}
+
+
+#breadcrumbs a:hover::after{
+  border-left-color: lightgreen;
+}
+
+#breadcrumbs .current,
+#breadcrumbs .current:hover{
+  	color:black;
+	font-weight: bold;
+	background: none;
+}
+
+#breadcrumbs .current::after,
+#breadcrumbs .current::before{
+	content: normal;
+}
