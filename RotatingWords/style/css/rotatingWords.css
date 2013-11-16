@@ -1,0 +1,109 @@
+/* Styling the container */
+.spin-wrapper{
+    width: 80%;
+    position: relative;
+    margin: 120px auto 0 auto;
+    padding: 10px;
+}
+
+/* Styling the whole sentence */
+.spin-sentence{
+    margin: 0;
+    text-align: left;
+    -webkit-box-shadow: 0px 0px 4px 0px #ffffff;
+	box-shadow: 0px 0px 4px 0px #ffffff; 
+}
+
+/* Styling the spans that are static */
+.spin-sentence span {
+    color: black;
+    white-space: nowrap;
+    font-size: 200%;
+    font-weight: normal;
+}
+
+/* This class holds the spans that spin */
+.spin-words{
+    display: inline;
+    text-indent: 10px;
+}
+
+/* Class for the span that spin */
+.spin-words span{
+    position: absolute;
+    opacity: 0;
+    overflow: hidden;
+    width: 100%;
+    color:blue;
+}
+
+/* Running all the animations at once, but at different times*/
+.spin-words-anim span{
+    -webkit-animation: rotateWord 9s linear infinite 0s;
+    -moz-animation: rotateWord 9s linear infinite 0s;
+    -ms-animation: rotateWord 9s linear infinite 0s;
+    animation: rotateWord 9s linear infinite 0s;
+}
+.spin-words span:nth-child(2) { 
+    -webkit-animation-delay: 3s;
+    -moz-animation-delay: 3s;
+    -ms-animation-delay: 3s;
+    animation-delay: 3s; 
+    color: red;
+}
+.spin-words span:nth-child(3) { 
+    -webkit-animation-delay: 6s;
+    -moz-animation-delay: 6s;
+    -ms-animation-delay: 6s;
+    animation-delay: 6s; 
+    color: green; 
+}
+
+
+/* 
+
+Ok so I'm ganna explain what I'm doing here.
+
+There are 4 versions of the same keyframes animation
+for all the browsers.
+
+I'm making the text start higher than it currently is and
+as time goes by it goes down. When it reaches 35% of the
+animation, I make it go down fast and make it disappear!
+
+*/
+@-webkit-keyframes rotateWord {
+    0% { opacity: 0; -webkit-animation-timing-function: ease-in; -webkit-transform: translateY(-15px);}
+    3% { opacity: 1;  -webkit-transform: translateY(-10px);}
+    6% { opacity: 1; -webkit-transform: translateY(-3px); }
+   	27% { opacity: 0.5; -webkit-transform: translateY(2px); }
+    35% { opacity: 0; -webkit-transform: translateY(20px); }
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes rotateWord {
+    0% { opacity: 0; -moz-animation-timing-function: ease-in; -moz-transform: translateY(-15px);}
+    3% { opacity: 1; -moz-transform: translateY(-10px); }
+    6% { opacity: 1; -moz-transform: translateY(-3px); }
+    27% { opacity: 0.5; -moz-transform: translateY(2px); }
+    35% { opacity: 0; -moz-transform: translateY(20px); }
+    100% { opacity: 0; }
+}
+
+@-ms-keyframes rotateWord {
+    0% { opacity: 0; -ms-animation-timing-function: ease-in; -ms-transform: translateY(-15px);}
+    3% { opacity: 1; -ms-transform: translateY(-10px); }
+    6% { opacity: 1; -ms-transform: translateY(-3px); }
+    27% { opacity: 0.5; -ms-transform: translateY(2px); }
+    350% { opacity: 0; -ms-transform: translateY(20px); }
+    100% { opacity: 0; }
+}
+
+@keyframes rotateWord {
+    0% { opacity: 0; animation-timing-function: ease-in; transform: translateY(-15px);}
+    3% { opacity: 1; transform: translateY(-10px); }
+    6% { opacity: 1; transform: translateY(-3px); }
+    27% { opacity: 0.5; transform: translateY(2px); }
+    35% { opacity: 0; transform: translateY(20px); }
+    100% { opacity: 0; }
+}
