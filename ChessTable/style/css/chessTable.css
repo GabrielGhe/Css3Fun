@@ -1,3 +1,9 @@
+/*
+ *
+ * CHESS BOARD 
+ * 
+ */
+
 td,tr {
 	margin:0px;
 	padding:0px;
@@ -19,3 +25,60 @@ table tr:nth-child(odd) td:nth-child(even){
 table tr:nth-child(even) td:nth-child(odd){
 	background-color:black;
 }
+
+
+/*
+ * LIST 1 
+ * All evens
+ */
+#list1 li:nth-child(even){
+	color:red;
+}
+
+
+/*
+ * LIST 2
+ * Only the 4th child
+ */
+#list2 li:nth-child(4){
+	color:blue;
+}
+
+
+/*
+ * LIST 3
+ * Every 3rd row
+ */
+#list3 li:nth-child(3n){
+	color:green;
+}
+
+
+/*
+ * LIST 4
+ * First and last
+ */
+#list4 li:first-of-type, #list4 li:last-of-type{
+	color:orange;
+}
+
+
+/*
+ * LIST 5
+ * First 3 and last 2
+ */
+#list5 li:nth-child(-n+3), #list5 li:nth-last-child(-n+2){
+	color:purple;
+}
+
+
+/*
+ * LIST 6
+ * Everything except the 3rd child
+ */
+#list6 li:not(:nth-child(3)){
+	color:brown;
+}
+
+
+
