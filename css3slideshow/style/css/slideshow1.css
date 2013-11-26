@@ -1,0 +1,227 @@
+div, a, li, ul {
+	margin: 0;
+	padding: 0;
+}
+
+ul {
+	list-style-type: none;
+}
+
+/* Holds the slider content */
+#slider {
+   background: #000;
+   border: 1px solid black;
+   box-shadow: 1px 1px 5px black;
+   height: 400px;
+   width: 200px;
+   margin: 40px auto 0;
+   overflow: visible;
+   position: relative;
+}
+
+/* Hide everything outside slider */
+#mask {
+   overflow: hidden;
+   height: 400px; 
+}
+
+
+#slider ul {
+   position: relative;
+}
+
+#slider li { 
+   width: 200;
+   height: 400px;
+   position: absolute;
+   top: -405px;
+}
+
+
+#slider li.luffyanim {
+   -webkit-animation: luf 25s linear infinite;
+	  -moz-animation: luf 25s linear infinite;
+   		-o-animation: luf 25s linear infinite;
+   		   animation: luf 25s linear infinite;
+}
+
+#slider li.zoroanim {
+   -webkit-animation: zor 25s linear infinite;
+	  -moz-animation: zor 25s linear infinite;
+   		-o-animation: zor 25s linear infinite;
+   		   animation: zor 25s linear infinite;
+}
+
+#slider li.namianim {
+   -webkit-animation: nam 25s linear infinite;
+	  -moz-animation: nam 25s linear infinite;
+   		-o-animation: nam 25s linear infinite;
+   		   animation: nam 25s linear infinite;
+}
+
+#slider li.usoppanim {
+   -webkit-animation: uso 25s linear infinite;
+	  -moz-animation: uso 25s linear infinite;
+   		-o-animation: uso 25s linear infinite;
+   		   animation: uso 25s linear infinite;
+}
+
+#slider li.sanjianim {
+   -webkit-animation: san 25s linear infinite;
+	  -moz-animation: san 25s linear infinite;
+   		-o-animation: san 25s linear infinite;
+   		   animation: san 25s linear infinite;
+}
+
+/*
+#slider li.chopperanim {
+   -webkit-animation: cho 45s linear infinite;
+	  -moz-animation: cho 45s linear infinite;
+   		-o-animation: cho 45s linear infinite;
+   		   animation: cho 45s linear infinite;
+}
+
+#slider li.robinanim {
+   -webkit-animation: rob 45s linear infinite;
+	  -moz-animation: rob 45s linear infinite;
+   		-o-animation: rob 45s linear infinite;
+   		   animation: rob 45s linear infinite;
+}
+
+#slider li.frankyanim {
+   -webkit-animation: fra 45s linear infinite;
+	  -moz-animation: fra 45s linear infinite;
+   		-o-animation: fra 45s linear infinite;
+   		   animation: fra 45s linear infinite;
+}
+
+#slider li.brookanim {
+   -webkit-animation: bro 45s linear infinite;
+	  -moz-animation: bro 45s linear infinite;
+   		-o-animation: bro 45s linear infinite;
+   		   animation: bro 45s linear infinite;
+}
+*/
+
+
+@-webkit-keyframes luf {
+	0%  { top: 0px; } /* When you start the slide, the first image is already visible */
+	4%  { top: 0px; } /* Original Position */
+	16% { top: 0px; opacity:1; z-index:0; } /* From 4% to 16 % = for 3 seconds the image is visible */
+	20% { top: 400px; opacity: 0; z-index: 0; } /* From 16% to 20% = for 1 second exit image */
+	21% { top: -400px; opacity: 0; z-index: -1; } /* Return to Original Position */
+	92% { top: -400px; opacity: 0; z-index: 0; }
+	96% { top: -400px; opacity: 0; } /* From 96% to 100% = for 1 second enter image*/
+	100%{ top: 0px; opacity: 1; }
+}
+
+
+@-webkit-keyframes zor {
+	0%  { top: -400px; opacity: 0; } /* Original Position */
+	16% { top: -400px; opacity: 0; }/* Starts moving after 16% to this position */
+	20% { top: 0px; opacity: 1; }
+	24% { top: 0px; opacity: 1; }  /* From 20% to 24% = for 1 second enter image*/
+	36% { top: 0px; opacity: 1; z-index: 0; }   /* From 24% to 36 % = for 3 seconds the image is visible */
+	40% { top: 400px; opacity: 0; z-index: 0; } /* From 36% to 40% = for 1 second exit image */
+	41% { top: -400px; opacity: 0; z-index: -1; }   /* Return to Original Position */
+	100%{ top: -400px; opacity: 0; z-index: -1; }
+}
+
+
+@-webkit-keyframes nam {
+	0%  { top: -400px; opacity: 0; }
+	36% { top: -400px; opacity: 0; }
+	40% { top: 0px; opacity: 1; }
+	44% { top: 0px; opacity: 1; } 
+	56% { top: 0px; opacity: 1; } 
+	60% { top: 400px; opacity: 0; z-index: 0; }
+	61% { top: -400px; opacity: 0; z-index: -1; } 
+	100%{ top: -400px; opacity: 0; z-index: -1; }
+}
+
+
+@-webkit-keyframes uso {
+	0%  { top: -400px; opacity: 0; }
+	56% { top: -400px; opacity: 0; }
+	60% { top: 0px; opacity: 1; }
+	64% { top: 0px; opacity: 1; }
+	76% { top: 0px; opacity: 1; z-index: 0; }
+	80% { top: 400px; opacity: 0; z-index: 0; }
+	81% { top: -400px; opacity: 0; z-index: -1; }
+	100%{ top: -400px; opacity: 0; z-index: -1; }
+}
+
+
+@-webkit-keyframes san{
+	0%  { top: -400px; opacity: 0; }
+	76% { top: -400px; opacity: 0; }
+	80% { top: 0px; opacity: 1; }
+	84% { top: 0px; opacity: 1; }
+	96% { top: 0px; opacity: 1; z-index: 0; }
+	100%{ top: 400px; opacity: 0; z-index: 0; }
+}
+
+/*
+@-webkit-keyframes cho,
+@-moz-keyframes cho,
+@-o-keyframes cho,
+@keyframes cho {
+
+}
+
+
+@-webkit-keyframes rob,
+@-moz-keyframes rob,
+@-o-keyframes rob,
+@keyframes rob {
+
+}
+
+
+@-webkit-keyframes fra,
+@-moz-keyframes fra,
+@-o-keyframes fra,
+@keyframes fra {
+
+}
+
+
+@-webkit-keyframes bro,
+@-moz-keyframes bro,
+@-o-keyframes bro,
+@keyframes bro {
+
+}
+*/
+
+
+.progress-bar { 
+   position: relative;
+   top: -5px;
+   width: 200; 
+   height: 5px;
+   background: #000;
+   -webkit-animation: progressanim 25s ease-out infinite;
+   	  -moz-animation: progressanim 25s ease-out infinite;
+   		-o-animation: progressanim 25s ease-out infinite;
+   		   animation: progressanim 25s ease-out infinite;
+}
+
+@-webkit-keyframes progressanim {
+   /* In these keyframes, the progress-bar is stationary */
+   0%, 20%, 40%, 60%, 80%, 100% { width: 0%; opacity: 0; }
+
+   /* In these keyframes, the progress-bar starts to come alive */
+   4%, 24%, 44%, 64%, 84% { width: 0%; opacity: 0.3; }
+
+   /* In these keyframes, the progress-bar moves forward for 3 seconds */
+   16%, 36%, 56%, 76%, 96% { width: 100%; opacity: 0.7; }
+
+   /* In these keyframes, the progress-bar has finished his path */
+   17%, 37%, 57%, 77%, 97% { width: 100%; opacity: 0.3; }
+
+   /* In these keyframes, the progress-bar will disappear and then resume the cycle */
+   18%, 38%, 58%, 78%, 98% { width: 100%; opacity: 0; }
+}
+
+
