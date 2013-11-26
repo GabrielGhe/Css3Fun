@@ -30,6 +30,9 @@ I also use [nth-child] in other ways to show how it can be used
 <h3>Rotating words</h3>
 <p>Rotate words using [@keyframes] and [transform : translateY]</p>
 
+<h3>Slideshow</h3>
+<p>Awesome pure css3 slideshow</p>
+
 <h3>Transitions</h3>
 <p>Making a square move on hover.</p>
 
